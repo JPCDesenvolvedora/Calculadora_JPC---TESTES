@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: rgb(161, 161, 161);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin: 16px;
+    padding: 8px;
+    background-color: rgb(114, 114, 114);
+}
+
+.area-valores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    margin: 16px;
+    background-color: seagreen;
+}
+
+.buttonCalcular {
+    background-color: white;
+    border-color: greenyellow;
+    margin: 8px;
+}
+
+.resultado {
+    justify-content: center;
+    align-self: center;
+    color: white;
+    font-size: 24px;
+}

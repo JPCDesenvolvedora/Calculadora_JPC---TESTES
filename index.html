@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Cálculos JPC</title>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <select class="seleciona-materia" id="selecionaMateria" onchange="valueSelection()">
+            <option>Selecione uma Matéria</option>
+            <option value="Bhaskara">Bháskara</option>
+            <option value="Porcentagem">Porcentagem</option>
+        </select>
+
+            <!-- "Interface da BHASKARA" -->
+            <div class="area-valores" id="interfaceBhaskara" style="display:none;">
+            <input type="number" class="input-a" id="valorA" placeholder="Digite o valor de a"/>
+            <input type="number" class="input-b" id="valorB" placeholder="Digite o valor de b"/>
+            <input type="number" class="input-c" id="valorC" placeholder="Digite o valor de c"/>
+
+            <button type="submit" id="buttonCalcular" class="buttonCalcular" onclick="btnCalcularBhaskara()">Calcular</button>
+            <h2 class="resultado" id="resultadoCalc"></h2>
+            </div>
+
+            <div class="area-valores" id="interfacePorcentagem" style="display:none;">
+                <input type="number" class="input-porcento" id="valorTotalPorcentagem" placeholder="Digite o Valor Total"/>
+                <input type="number" class="input-porcento" id="valorPorcento" placeholder="Digite o valor da Porcentagem (Ex: 50)"/>
+                <button type="submit" id="buttonCalcular" class="buttonCalcular" onclick="btnCalcularPorcentagem()">Calcular</button>
+                <h3 class="resultado" id="resultadoCalcPercent"></h3>
+            </div>
+        
+    </main>
+    <script src="codes.js"></script>
+</body>
+</html>
