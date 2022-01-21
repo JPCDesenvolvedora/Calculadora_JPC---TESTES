@@ -11,12 +11,25 @@
 </head>
 <body>
     <header>
+        <nav>
+            <a id="logo-jpc">
+                <img class="logo-jpc" src="https://cdn.discordapp.com/attachments/750028167225540648/932743541778710568/calculadora-jpc.png">
+            </a>
+            <div class="nav-text">
+                <a href="#inicio" class="nav-calc">Calculadora</a>
+                <a href="#informacoes" class="nav-contato">Contato</a>
+                <a href="#doacao" class="nav-doacao">Doe para o Desenvolvedor</a>
+            </div>
+        </nav>
     </header>
-    <main>
+    <main id="inicio">
+        <div class="div-main">
         <select class="seleciona-materia" id="selecionaMateria" onchange="valueSelection()">
             <option>Selecione uma Matéria</option>
             <option value="Bhaskara">Bháskara</option>
             <option value="Porcentagem">Porcentagem</option>
+            <option value="KMparaM">KM para M</option>
+            <option value="MparaKM">M para KM</option>
         </select>
 
             <!-- "Interface da BHASKARA" -->
@@ -26,17 +39,77 @@
             <input type="number" class="input-c" id="valorC" placeholder="Digite o valor de c"/>
 
             <button type="submit" id="buttonCalcular" class="buttonCalcular" onclick="btnCalcularBhaskara()">Calcular</button>
-            <h2 class="resultado" id="resultadoCalc"></h2>
+            
             </div>
 
+            <!-- "Interface da PORCENTAGEM" -->
             <div class="area-valores" id="interfacePorcentagem" style="display:none;">
                 <input type="number" class="input-porcento" id="valorTotalPorcentagem" placeholder="Digite o Valor Total"/>
                 <input type="number" class="input-porcento" id="valorPorcento" placeholder="Digite o valor da Porcentagem (Ex: 50)"/>
                 <button type="submit" id="buttonCalcular" class="buttonCalcular" onclick="btnCalcularPorcentagem()">Calcular</button>
-                <h3 class="resultado" id="resultadoCalcPercent"></h3>
             </div>
-        
+
+            <!-- "Interface da KM para M" -->
+            <div class="area-valores" id="interfaceKMparaM" style="display: none;">
+                <input type="number" class="input-km" id="valorKM" placeholder="Digite o valor de KM"/>
+                <button type="submit" id="buttonCalcular" class="buttonCalcular" onclick="btnCalcularKMparaM()">Calcular</button>
+            </div>
+
+            <!-- "Interface da M para KM" -->
+            <div class="area-valores" id="interfaceMparaKM" style="display: none;">
+                <input type="number" class="input-m" id="valorM" placeholder="Digite o valor de M"/>
+                <button type="submit" id="buttonCalcular" class="buttonCalcular" onclick="btnCalcularMparaKM()">Calcular</button>
+            </div>
+
+        </div>
+        <div class="boas-vindas" id="boas-vindas" style="display: block;">
+            <p class="boas-vindasTexto">Seja Bem Vindo ao JPC Calculadora! Desejamos uma ótima experiência e aprendizado!</p>
+            <p class="boas-vindasTexto2">Essa não é uma calculadora comum, ela além de calcular, te ensina como calculou e estimula seu aprendizado, se tornando assim, o seu braço direito nos estudos!</p>
+        </div>
+        <!-- "Início resposta da Bháskara" -->
+        <p class="resultado" id="resultadoCalc" style="display: none;"></p>
+        <p class="resultado" id="explicBhaskara" style="display: none;">Para o cálculo da Bháskara será pego o valor 
+        de a(x²), o valor de b(x) e o valor de c. A partir desses valores montamos a fórmula de bháskara 
+        com "-b± √(b)² - 4.a.c / 2.a", para montarmos substituíremos os valores de a, b e c na fórmula. Com isso chegaremos a resposta correta.</p>
+        <!-- "Término resposta da Bháskara" -->
+
+        <!-- "Início resposta da Porcentagem" -->
+        <p class="resultado" id="resultadoCalcPercent" style="display: none;"></p>
+        <p class="resultado" id="explicPorcentagem" style="display: none;">Para esse cálculo é pego o valor total inserido e multiplicado pela porcentagem inserida, o resultado da multiplicação é dividido por 100, com isso teremos a porcentagem do valor total, por exemplo, digamos que você inseriu 1000(valor total) e 20(porcentagem), será calculado 20% de 1000, que retornará 200.</p>
+        <!-- "Término da resposta da Porcentagem" -->
+
+        <!-- "Início resposta KM para M" -->
+        <p class="resultado" id="resultadoCalcKMparaM" style="display: none;"></p>
+        <p class="resultado" id="explicKMparaM" style="display: none;">Para essa conversão utilizaremos a multiplicação por 1000 para chegarmos ao resultado, pois 1km = 1000m.</p>
+
+        <!-- "Término resposta KM por M" -->
+        <p class="resultado" id="resultadoCalcMparaKM" style="display: none;"></p>
+        <p class="resultado" id="explicMparaKM" style="display: none;">Para essa conversão utilizaremos a divisão por 1000 para chegarmos ao resultado, pois 1000m = 1km.</p>
     </main>
+    <div class="informacoes" id="informacoes">
+        <p class="contato">Encontrou algum Erro nos Cálculos? Contate-nos!</p>
+        <div class="logos-contato">
+        <a class="logo-gmail" href="mailto:jpmpitoni@gmail.com ?subject=Encontrei um erro em JPC Calculadora!&body=Descreva o erro encontrado e anexe prints se possível! Agradecemos profundamente por sua ajuda e desejamos uma ótima semana!">
+            <img class="logo-gmail" src="https://img.icons8.com/ios/50/ffffff/gmail--v1.png"/>
+        </a>
+        <a class="logo-linkedin" href="https://www.linkedin.com/in/jo%C3%A3o-pedro-matias-pitoni-b12a131b6/">
+            <img class="logo-linkedin" src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png"/>
+        </a>
+        <a class="logo-github" href="https://github.com/JPCDesenvolvedora">
+            <img class="logo-github" src="https://img.icons8.com/glyph-neue/64/ffffff/github.png"/>
+        </a>
+        </div>
+    </div>
+    <div class="doacao" id="doacao">
+        <p class="doacao-dev">Doe para o Desenvolvedor</p>
+        <div class="area-chave">
+          <img class="chavePix" src="https://cdn.discordapp.com/attachments/750028167225540648/934184238511710248/pix.png"/>
+          <p class="chave">Chave Aleatória: </p>
+          <p>7254569b-096a-4c31-bfdc-5ab15144d115</p>
+          <p>Beneficiário: João Pedro Matias Pitoni</p>
+          <p>Banco: Nubank</p>
+        </div>
+    </div>
     <script src="codes.js"></script>
 </body>
 </html>
